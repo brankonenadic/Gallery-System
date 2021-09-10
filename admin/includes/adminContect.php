@@ -12,8 +12,12 @@
                
                 $result_set = UserClass::find_all_users();
                 while ($row = mysqli_fetch_array($result_set)) {
-                    echo $row['first_name'] . " " . $row['last_name'] . " " . $row['username'] . "<br>";
+                    $id = UserClass::get_id($row['username']);
+
+                    echo  $id . " " . $row['first_name'] . " " . $row['last_name'] . " " . $row['username'] . "<br>";
                 }
+                $user = UserClass::get_user_by_id(1);
+                echo $user['username'];
                  ?>
                 <ol class="breadcrumb">
                     <li>
