@@ -19,7 +19,6 @@ public static function get_user_by_id($user_id) {
     return $user;
 }
 
-
 public static function get_id($username) {
     global $database;
     $sql = $database->query("SELECT * FROM users WHERE username= '$username'");
