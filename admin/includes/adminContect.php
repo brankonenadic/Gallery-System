@@ -16,8 +16,24 @@
 
                     echo  $id . " " . $row['first_name'] . " " . $row['last_name'] . " " . $row['username'] . "<br>";
                 }
-                $user = UserClass::get_user_by_id(1);
-                echo $user['username'];
+                $find = UserClass::get_user_by_id(3);
+               /*  echo $user['username']; */
+
+          /*       $user = new UserClass();
+                $user->id = $find['id'];
+                $user->username = $find['username'];
+                $user->password = $find['password'];
+                $user->first_name = $find['first_name'];
+                $user->last_name = $find['last_name']; */
+                echo $user->id;
+                echo "<br>";
+                echo $user->username;
+                echo "<br>";
+                echo $user->password;
+                echo "<br>";
+                echo $user->first_name;
+                echo "<br>";
+                echo $user->last_name;
                  ?>
                 <ol class="breadcrumb">
                     <li>
