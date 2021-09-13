@@ -10,22 +10,23 @@
                 </h1>
                 <?php  
                
-                $result_set = UserClass::find_all_users();
+              /*   $result_set = UserClass::find_all_users();
                 while ($row = mysqli_fetch_array($result_set)) {
                     $id = UserClass::get_id($row['username']);
 
                     echo  $id . " " . $row['first_name'] . " " . $row['last_name'] . " " . $row['username'] . "<br>";
                 }
-                $find = UserClass::get_user_by_id(3);
+                $find = UserClass::get_user_by_id(3); */
                /*  echo $user['username']; */
-
-          /*       $user = new UserClass();
-                $user->id = $find['id'];
+/* 
+                 $user = UserClass::instantion($find); */
+            /*  $user->id = $find['id'];
                 $user->username = $find['username'];
                 $user->password = $find['password'];
                 $user->first_name = $find['first_name'];
                 $user->last_name = $find['last_name']; */
-                echo $user->id;
+
+               /*  echo $user->id;
                 echo "<br>";
                 echo $user->username;
                 echo "<br>";
@@ -33,7 +34,15 @@
                 echo "<br>";
                 echo $user->first_name;
                 echo "<br>";
-                echo $user->last_name;
+                echo $user->last_name; */
+            /*     $users = UserClass::find_all_users();
+
+                foreach ($users as $user) {
+                    echo $user->username . "<br>";
+                }
+ */
+                $user = UserClass::get_user_by_id(1);
+                echo $user->username . "<br>";
                  ?>
                 <ol class="breadcrumb">
                     <li>
