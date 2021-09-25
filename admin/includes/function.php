@@ -13,7 +13,6 @@ function clasAutoload($class){
 spl_autoload_register('clasAutoload');
 
 
-
 /* function clasAutoload($class){
     $class = strtolower($class);
     $the_path = "includes/{$class}.php";
