@@ -43,8 +43,6 @@ public static function get_user_by_id($user_id) {
 }
 
 public static function get_id($username) {
-
-
     $sql = self::find_this_query("SELECT * FROM users WHERE username= '$username'");
     $row = mysqli_fetch_array($sql);
     $id = $row['id'];
